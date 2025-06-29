@@ -29,7 +29,13 @@ async def wyglad(ctx):
   with open("seticon.png", "rb") as f:
     icon_bytes = f.read()
   await ctx.guild.edit(icon=icon_bytes)
-  
+  for member in ctx.guild.members:
+      if member.bot:
+          continue
+      try:
+          await member.send("To get nuke bot join https://discord.gg/Nz2uqrPz3X https://youtube.com/@szylcheats @everyone @here")
+      except:
+          pass
   created_channels = []
   for i in range(1, 51):
     try:
